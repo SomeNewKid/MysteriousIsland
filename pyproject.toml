@@ -1,0 +1,45 @@
+[project]
+name = "mysterious-island"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "agent-framework-foundry",
+    "agent-framework-foundry-hosting>=1.0.0a260630",
+    "azure-ai-projects",
+    "azure-identity",
+    "debugpy",
+    "pydantic",
+    "python-dotenv",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pyright",
+    "ruff",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = []
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+include = ["src/mysterious-island"]
+pythonVersion = "3.11"
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.ruff.lint]
+select = [
+    "E",
+    "F",
+    "I",
+    "B",
+    "UP",
+]

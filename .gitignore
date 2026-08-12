@@ -150,6 +150,7 @@ activemq-data/
 # Environments
 .env
 .envrc
+.azure/
 .venv
 env/
 venv/
@@ -216,3 +217,6 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Knowledge
+.knowledge/
